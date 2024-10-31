@@ -14,6 +14,6 @@ struct MyTennisAppApp: App {
         WindowGroup {
             ContentView()
         }
-//				.modelContainer(for: LessonItems.self)
+				.modelContainer(for: Time.self)
     }
 }

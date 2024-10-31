@@ -12,6 +12,10 @@
 		E2527DCD2CC6EC23005D3E63 /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DCC2CC6EC22005D3E63 /* Lessons.swift */; };
 		E2527DCF2CC72CCA005D3E63 /* Mystic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DCE2CC72CCA005D3E63 /* Mystic.swift */; };
 		E2527DD12CC73733005D3E63 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DD02CC73733005D3E63 /* SideMenu.swift */; };
+		E29780B22CD164E5002BBA83 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29780B12CD164E5002BBA83 /* ViewTest.swift */; };
+		E29780B42CD28073002BBA83 /* viewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29780B32CD28073002BBA83 /* viewTest3.swift */; };
+		E29780B82CD2F3EE002BBA83 /* official.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29780B72CD2F3EE002BBA83 /* official.swift */; };
+		E29780BA2CD2FB35002BBA83 /* modalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29780B92CD2FB35002BBA83 /* modalTest.swift */; };
 		E29793FB2CC423CB00E63F8F /* MyTennisAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29793FA2CC423CB00E63F8F /* MyTennisAppApp.swift */; };
 		E29793FD2CC423CB00E63F8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29793FC2CC423CB00E63F8F /* ContentView.swift */; };
 		E29793FF2CC423CC00E63F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29793FE2CC423CC00E63F8F /* Assets.xcassets */; };
@@ -19,7 +23,6 @@
 		E297940C2CC423CC00E63F8F /* MyTennisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E297940B2CC423CC00E63F8F /* MyTennisAppTests.swift */; };
 		E29794162CC423CC00E63F8F /* MyTennisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29794152CC423CC00E63F8F /* MyTennisAppUITests.swift */; };
 		E29794182CC423CC00E63F8F /* MyTennisAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29794172CC423CC00E63F8F /* MyTennisAppUITestsLaunchTests.swift */; };
-		E2AE033F2CC751B7004E96E1 /* TestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE033E2CC751B7004E96E1 /* TestPage.swift */; };
 		E2AE03412CC75803004E96E1 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE03402CC75803004E96E1 /* Performance.swift */; };
 		E2AE03432CC75835004E96E1 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE03422CC75835004E96E1 /* Dashboard.swift */; };
 		E2AE03452CC75853004E96E1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE03442CC75853004E96E1 /* Profile.swift */; };
@@ -48,6 +51,10 @@
 		E2527DCC2CC6EC22005D3E63 /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		E2527DCE2CC72CCA005D3E63 /* Mystic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mystic.swift; sourceTree = "<group>"; };
 		E2527DD02CC73733005D3E63 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		E29780B12CD164E5002BBA83 /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
+		E29780B32CD28073002BBA83 /* viewTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewTest3.swift; sourceTree = "<group>"; };
+		E29780B72CD2F3EE002BBA83 /* official.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = official.swift; sourceTree = "<group>"; };
+		E29780B92CD2FB35002BBA83 /* modalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalTest.swift; sourceTree = "<group>"; };
 		E29793F72CC423CB00E63F8F /* MyTennisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTennisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29793FA2CC423CB00E63F8F /* MyTennisAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTennisAppApp.swift; sourceTree = "<group>"; };
 		E29793FC2CC423CB00E63F8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		E29794112CC423CC00E63F8F /* MyTennisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTennisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29794152CC423CC00E63F8F /* MyTennisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTennisAppUITests.swift; sourceTree = "<group>"; };
 		E29794172CC423CC00E63F8F /* MyTennisAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTennisAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E2AE033E2CC751B7004E96E1 /* TestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPage.swift; sourceTree = "<group>"; };
 		E2AE03402CC75803004E96E1 /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		E2AE03422CC75835004E96E1 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		E2AE03442CC75853004E96E1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -94,6 +100,10 @@
 			children = (
 				E200E13E2CCCA261002AEEA0 /* Data.swift */,
 				E200E1402CCCA268002AEEA0 /* DataView.swift */,
+				E29780B12CD164E5002BBA83 /* ViewTest.swift */,
+				E29780B32CD28073002BBA83 /* viewTest3.swift */,
+				E29780B72CD2F3EE002BBA83 /* official.swift */,
+				E29780B92CD2FB35002BBA83 /* modalTest.swift */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -154,7 +164,6 @@
 				E2527DC32CC5F345005D3E63 /* Components */,
 				E29793FA2CC423CB00E63F8F /* MyTennisAppApp.swift */,
 				E29793FC2CC423CB00E63F8F /* ContentView.swift */,
-				E2AE033E2CC751B7004E96E1 /* TestPage.swift */,
 				E29793FE2CC423CC00E63F8F /* Assets.xcassets */,
 				E29794002CC423CC00E63F8F /* Preview Content */,
 			);
@@ -319,12 +328,15 @@
 				E2527DCF2CC72CCA005D3E63 /* Mystic.swift in Sources */,
 				E200E13F2CCCA261002AEEA0 /* Data.swift in Sources */,
 				E2527DCD2CC6EC23005D3E63 /* Lessons.swift in Sources */,
+				E29780B42CD28073002BBA83 /* viewTest3.swift in Sources */,
 				E2AE03432CC75835004E96E1 /* Dashboard.swift in Sources */,
 				E2AE03412CC75803004E96E1 /* Performance.swift in Sources */,
 				E2527DD12CC73733005D3E63 /* SideMenu.swift in Sources */,
 				E29793FD2CC423CB00E63F8F /* ContentView.swift in Sources */,
-				E2AE033F2CC751B7004E96E1 /* TestPage.swift in Sources */,
+				E29780B22CD164E5002BBA83 /* ViewTest.swift in Sources */,
+				E29780BA2CD2FB35002BBA83 /* modalTest.swift in Sources */,
 				E2AE03452CC75853004E96E1 /* Profile.swift in Sources */,
+				E29780B82CD2F3EE002BBA83 /* official.swift in Sources */,
 				E200E1412CCCA268002AEEA0 /* DataView.swift in Sources */,
 				E29793FB2CC423CB00E63F8F /* MyTennisAppApp.swift in Sources */,
 			);

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E200E13F2CCCA261002AEEA0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E200E13E2CCCA261002AEEA0 /* Data.swift */; };
 		E200E1412CCCA268002AEEA0 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E200E1402CCCA268002AEEA0 /* DataView.swift */; };
+		E2036E3A2CD39CD000FB634E /* anotherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2036E392CD39CD000FB634E /* anotherTest.swift */; };
 		E2527DCD2CC6EC23005D3E63 /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DCC2CC6EC22005D3E63 /* Lessons.swift */; };
 		E2527DCF2CC72CCA005D3E63 /* Mystic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DCE2CC72CCA005D3E63 /* Mystic.swift */; };
 		E2527DD12CC73733005D3E63 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2527DD02CC73733005D3E63 /* SideMenu.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		E200E13E2CCCA261002AEEA0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E200E1402CCCA268002AEEA0 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		E2036E392CD39CD000FB634E /* anotherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = anotherTest.swift; sourceTree = "<group>"; };
 		E2527DCC2CC6EC22005D3E63 /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
 		E2527DCE2CC72CCA005D3E63 /* Mystic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mystic.swift; sourceTree = "<group>"; };
 		E2527DD02CC73733005D3E63 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				E29780B32CD28073002BBA83 /* viewTest3.swift */,
 				E29780B72CD2F3EE002BBA83 /* official.swift */,
 				E29780B92CD2FB35002BBA83 /* modalTest.swift */,
+				E2036E392CD39CD000FB634E /* anotherTest.swift */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				E200E13F2CCCA261002AEEA0 /* Data.swift in Sources */,
 				E2527DCD2CC6EC23005D3E63 /* Lessons.swift in Sources */,
 				E29780B42CD28073002BBA83 /* viewTest3.swift in Sources */,
+				E2036E3A2CD39CD000FB634E /* anotherTest.swift in Sources */,
 				E2AE03432CC75835004E96E1 /* Dashboard.swift in Sources */,
 				E2AE03412CC75803004E96E1 /* Performance.swift in Sources */,
 				E2527DD12CC73733005D3E63 /* SideMenu.swift in Sources */,

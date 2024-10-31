@@ -34,25 +34,39 @@ struct Official: View {
 				 ("3:15 PM - 10:00 AM", "Charlie White", "Court 2", "Do more Forehand")
 			])
 	 ]
+	 @State var dateTimeArray: [(String, [(String, String, String, String)])] = [
+			("October 30, 2024", [
+				 ("10:00 AM - 10:00 AM ", "Margot Feazel", "Court 1", "Do more Forehand"),
+				 ("2:00 PM - 10:00 AM", "Jane Smith", "Court 2", "Do more Backhand"),
+				 ("5:00 PM - 10:00 AM", "Alice Johnson", "Court 3", "Do more Serve")
+			]),
+			("November 1, 2024", [
+				 ("11:30 AM - 10:00 AM", "Khanh Nguyen", "Court 1", "Do more Forehand"),
+				 ("3:15 PM - 10:00 AM", "Charlie White", "Court 2", "Do more Forehand")
+			])
+	 ]
 
 
 	 var body: some View {
 			NavigationStack {
+
 				 ScrollView {
 						Divider()
-//						Text(date, style: .date)
-//							 .font(.title2)
-//							 .fontWeight(.semibold)
-//							 .padding([.top, .leading, .trailing])
-
-					
-						VStack(alignment: .leading, spacing: 10) {
-							 ForEach(dateTime_Arr, id: \.0) { dateEntry in
-									Section(header: Text(dateEntry.0).font(.headline)) {
-										 ForEach(dateEntry.1, id: \.0) { lesson in
-												ScrollView(.horizontal, showsIndicators: false) {
-													 HStack {
-															Lesson_List(name: lesson.1, time: lesson.0, location: lesson.2, lessonNotes: lesson.3)
+						VStack(alignment: .leading, spacing: 4) {
+							 ForEach(dateTimeArray, id: \.0) { dateEntry in
+									Section(header: Text(dateEntry.0)
+										 .font(.system(size: 22, weight: .bold))
+										 .padding(.leading, 20)
+										 .padding(.top, 5) ) {
+										 ScrollView(.horizontal, showsIndicators: false) {
+												HStack(spacing: 10) {
+													 ForEach(dateEntry.1, id: \.0) { lesson in
+															Lesson_List(
+																 name: lesson.1,
+																 time: lesson.0,
+																 location: lesson.2,
+																 lessonNotes: lesson.3
+															)
 													 }
 												}
 										 }
@@ -75,40 +89,56 @@ struct Official: View {
 										 .font(.system(size: 24))
 							 }
 							 .sheet(isPresented: $modalToggle) {
-									Modal_Input(modalToggle: $modalToggle)
-										 .transition(.opacity)
-										 .presentationDetents([.fraction(0.85)])
-										 .presentationDragIndicator(.visible)
+									Modal_Input(modalToggle: $modalToggle) { date, time, name, location, lessonNote in
+
+										 if let dateIndex = dateTimeArray.firstIndex(where: { $0.0 == date }) {
+												dateTimeArray[dateIndex].1.append((time, name, location, lessonNote))
+
+													 // Sort times within the same date
+												dateTimeArray[dateIndex].1.sort {
+													 let timeFormatter = DateFormatter()
+													 timeFormatter.dateFormat = "h:mm a"
+													 let time1 = timeFormatter.date(from: $0.0) ?? Date.distantPast
+													 let time2 = timeFormatter.date(from: $1.0) ?? Date.distantPast
+													 return time1 < time2
+												}
+										 } else {
+												dateTimeArray.append((date, [(time, name, location, lessonNote)]))
+										 }
+
+												// Sort dates in dateTimeArray
+										 dateTimeArray.sort {
+												let dateFormatter = DateFormatter()
+												dateFormatter.dateStyle = .medium
+												let date1 = dateFormatter.date(from: $0.0) ?? Date.distantPast
+												let date2 = dateFormatter.date(from: $1.0) ?? Date.distantPast
+												return date1 < date2
+										 }
+									}
+									.presentationDetents([.fraction(0.89)])
+									.presentationDragIndicator(.visible)
+									.transition(.opacity)
+
 							 }
+							 
 
 						}
 				 }
 			}
 	 }
+
+
 }
 
-//struct Lesson_Model: Identifiable {
-//	 let id = UUID()
-//	 var name: String
-//	 var location: String
-//	 var notes: String
-//	 var startDate: String
-//	 var endDate: String
-//	 var date: Date
-//}
+
 
 struct Lesson_List: View {
-//	 var date: String
 	 var name: String
 	 var time: String
 	 var location: String
 	 var lessonNotes: String
 	 var body: some View {
 			VStack(alignment: .leading, spacing: 15) {
-//				 Text(date)
-//						.font(.title2)
-//						.fontWeight(.semibold)
-//						.padding([.top, .leading, .trailing])
 				 HStack {
 						Text(name)
 							 .font(.title3)
@@ -155,7 +185,7 @@ struct Lesson_List: View {
 				 }
 			}
 			.padding()
-			.frame(maxWidth: 600)
+			.frame(width: 360)
 			.background(
 				 RoundedRectangle(cornerRadius: 15)
 						.fill(Color(.systemGray5))
@@ -166,7 +196,10 @@ struct Lesson_List: View {
 			)
 			.shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 3)
 			.padding()
+			Spacer()
 	 }
+
+
 }
 
 
@@ -178,6 +211,8 @@ struct Modal_Input: View {
 	 @State private var locationText: String = ""
 	 @State private var lessonText: String = ""
 	 @Binding var modalToggle: Bool
+	 var onAddLesson: (String, String, String, String, String) -> Void
+
 
 	 var body: some View {
 			NavigationStack {
@@ -215,6 +250,19 @@ struct Modal_Input: View {
 						Button(action: {
 							 withAnimation {
 									modalToggle.toggle()
+									let dateFormatter = DateFormatter()
+									dateFormatter.dateStyle = .medium
+									let dateString = dateFormatter.string(from: dateValue)
+
+									let timeFormatter = DateFormatter()
+									timeFormatter.dateFormat = "h:mm a"
+									let startTime = timeFormatter.string(from: startTimeValue)
+									let endTime = timeFormatter.string(from: endTimeValue)
+									let timeString = "\(startTime) - \(endTime)"
+
+									
+					
+									onAddLesson(dateString, timeString, nameText, locationText, lessonText)
 							 }
 						}) {
 							 Text("Create Lesson")
@@ -250,5 +298,5 @@ struct Modal_Input: View {
 }
 
 #Preview {
-			Official()
+	 Official()
 }

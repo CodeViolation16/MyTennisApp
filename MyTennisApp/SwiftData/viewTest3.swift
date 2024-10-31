@@ -1,17 +1,7 @@
 import SwiftUI
 
 struct ContentView12: View {
-	 @State var dateTimeArr: [(String, [(String, String, String)])] = [
-			("October 30, 2024", [
-				 ("10:00 AM", "John Doe", "Court 1"),
-				 ("2:00 PM", "Jane Smith", "Court 2"),
-				 ("5:00 PM", "Alice Johnson", "Court 3")
-			]),
-			("November 1, 2024", [
-				 ("11:30 AM", "Bob Brown", "Court 1"),
-				 ("3:15 PM", "Charlie White", "Court 2")
-			])
-	 ]
+	 @State var dateTimeArr: [(String, [(String, String, String)])] = []
 	 private func deleteBooking(dateIndex: Int, bookingIndex: Int) {
 			dateTimeArr[dateIndex].1.remove(at: bookingIndex)
 			if dateTimeArr[dateIndex].1.isEmpty {
